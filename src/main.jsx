@@ -21,7 +21,7 @@ import LoginForm from './Components/LoginForm.jsx';
 import Cardentingandpainting from './Components/CarDentingandPainting.jsx';
 import CarBatteryRepairandServices from './Components/CarBatteryRepairandServices.jsx';
 import BodyServices from './Components/BodyServices.jsx';
-import Carclutchservices from './Components/carclutchservices.jsx';
+import Carclutchservices from './Components/Carclutchservices.jsx';
 import CarACRepairs from './Components/CarAcrepairs.jsx';
 import CarsuspenceandFitness from './Components/CarsuspenceandFitness.jsx';
 import CarPolishingServices from './Components/CarPolishingServices.jsx';
