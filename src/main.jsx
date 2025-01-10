@@ -22,7 +22,7 @@ import Cardentingandpainting from './Components/CarDentingandPainting.jsx';
 import CarBatteryRepairandServices from './Components/CarBatteryRepairandServices.jsx';
 import BodyServices from './Components/BodyServices.jsx';
 import Carclutchservices from './Components/Carclutchservices.jsx';
-import CarACRepairs from './Components/CarACrepairs.jsx';
+import CarACRepairs from './Components/CarACRepairs.jsx';
 import CarsuspenceandFitness from './Components/CarsuspenceandFitness.jsx';
 import CarPolishingServices from './Components/CarPolishingServices.jsx';
 import CarInspections from './Components/CarInspections.JSX';
