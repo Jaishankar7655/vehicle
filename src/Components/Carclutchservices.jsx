@@ -25,7 +25,7 @@ function Carclutchservices() {
             <span className="text-4xl ml-1">300</span>
             <span className="ml-2 text-lg font-normal">onwards / service</span>
           </div>
-          <p className="text-sm mt-2 text-red-100">
+           <p className="text-sm mt-2 text-red-100">
             Note: These prices are indicative, and actual charges may vary.
           </p>
         </div>
