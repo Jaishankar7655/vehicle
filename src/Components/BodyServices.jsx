@@ -1,90 +1,134 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Car, Paintbrush } from "lucide-react";
-import ServiceSearch from "./ServiceSearch";
+import frontbumfer from "../assets/bodyimages/frontbumfer.png";
+import frontfunder from "../assets/bodyimages/frontfunder.png";
+import frontdoor from "../assets/bodyimages/frontdoor.png";
+import rareroof from "../assets/bodyimages/rareroof.png";
+import roof from "../assets/bodyimages/roof.png";
+import bonut from "../assets/bodyimages/bonut.png";
+import runningboard from "../assets/bodyimages/runningboard.png";
+import quarterpannel from "../assets/bodyimages/quarterpannel.png";
+import sideviewmirror from "../assets/bodyimages/sideviewmirror.png";
+import diccky from "../assets/bodyimages/diccky.png";
+import Searchitem from "./Searchitem";
 
-const ServicesShowcase = () => {
-  const [query, setQuery] = useState("");
-  const navigate = useNavigate();
-
-  const enhancedServices = [
+function BodyServices() {
+  // Array containing the service data, including title, price, and corresponding image.
+  const bodyservices = [
     {
-      title: "Car wash and spa",
-      description:
-        "Comprehensive cleaning and restoration services to maintain your vehicle's pristine condition",
-      icon: <Car className="w-8 h-8 text-red-500" />,
-      route: "/services/CarWashService",
+      title: "Front Bumper Repair",
+      price: "₹2,250",
+      image: frontbumfer,
     },
     {
-      title: "Car Denting and Painting Service",
-      description:
-        "Car denting and painting is a crucial service that restores a vehicle's appearance and protects its body from further damage",
-      icon: <Paintbrush className="w-8 h-8 text-red-500" />,
-      route: "/services/Cardentingandpainting",
+      title: "Front Fender Service",
+      price: "₹2,350",
+      image: frontfunder,
+    },
+    {
+      title: "Front Door Service",
+      price: "₹2,600",
+      image: frontdoor,
+    },
+    {
+      title: "Rear Roof Repair",
+      price: "₹2,600",
+      image: rareroof,
+    },
+    {
+      title: "Roof Service",
+      price: "₹4,000",
+      image: roof,
+    },
+    {
+      title: "Bonnet Service",
+      price: "₹3,800",
+      image: bonut,
+    },
+    {
+      title: "Running Board Repair",
+      price: "₹1,800",
+      image: runningboard,
+    },
+    {
+      title: "Quarter Panel Service",
+      price: "₹2,600",
+      image: quarterpannel,
+    },
+    {
+      title: "Diccky Repair",
+      price: "₹500",
+      image: diccky,
+    },
+    {
+      title: "Side Mirror Repair",
+      price: "₹500",
+      image: sideviewmirror,
     },
   ];
 
-  const searchTerm = enhancedServices.filter((service) =>
-    service.title.toLowerCase().includes(query.toLowerCase()) ||
-    service.description.toLowerCase().includes(query.toLowerCase())
-  );
+  // State for search query
+  const [query, setquery] = useState("");
+
+  // Filter function based on search query
+  const filterSearch = () => {
+    return bodyservices.filter((product) =>
+      product.title.toLowerCase().includes(query.toLowerCase())
+    );
+  };
 
   return (
-    <div className="w-[95%] mx-auto py-16">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
-          Our Services
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Discover our comprehensive range of automotive services designed to
-          keep your vehicle in perfect condition
-        </p>
-      </div>
-      <ServiceSearch query={query} setQuery={setQuery} />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {searchTerm.length > 0 ? (
-          searchTerm.map((service, index) => (
-            <div
-              key={index}
-              onClick={() => navigate(service.route)}
-              className="w-full bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl 
-                     transform hover:-translate-y-1 transition-all duration-300 
-                     cursor-pointer border border-gray-100 hover:border-red-200"
-            >
+    <div className="bg-gradient-to-b from-slate-100 to-slate-300 py-8">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-6">
+          Body Repairs
+        </h1>
+
+        {/* Search input */}
+        <Searchitem setquery={setquery} query={query}  />
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          {filterSearch().length > 0 ? (
+            filterSearch().map((product, index) => (
               <div
-                className="bg-red-50 rounded-xl p-4 w-16 h-16 flex items-center justify-center 
-                          group-hover:bg-red-100 transition-colors duration-300 mb-4"
+                key={index}
+                className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
               >
-                {service.icon}
+                <div className="p-4">
+                  {/* Product Name */}
+                  <h3 className="text-lg font-semibold text-gray-900 text-center mb-2">
+                    {product.title}
+                  </h3>
+
+                  {/* Image Container */}
+                  <div className="aspect-square overflow-hidden mb-4 bg-white rounded-lg">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Product Details */}
+                  <div className="text-center space-y-2">
+                    <div className="flex items-center justify-between mt-2">
+                      <p className="text-green-600 font-bold text-lg">
+                        {product.price}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <h3
-                className="text-xl font-semibold mb-3 text-gray-800 group-hover:text-red-600 
-                         transition-colors duration-300"
-              >
-                {service.title}
-              </h3>
-
-              <p className="text-gray-600 leading-relaxed">
-                {service.description}
-              </p>
-
-              <div className="mt-4 flex items-center text-red-600 font-medium">
-                <span className="group-hover:mr-2 transition-all duration-300">
-                  Learn More
-                </span>
-                <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  →
-                </span>
-              </div>
+            ))
+          ) : (
+            <div className="col-span-full text-center">
+              <p className="text-xl text-gray-600">No Services Found</p>
             </div>
-          ))
-        ) : (
-          <p className="text-center text-red-600">No services found</p>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
-};
+}
 
-export default ServicesShowcase;
+export default BodyServices;

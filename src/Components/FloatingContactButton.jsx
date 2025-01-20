@@ -34,7 +34,7 @@ const FloatingContactButton = () => {
     {
       icon: <MessageCircle className="w-5 h-5 text-green-600" />,
       text: "Chat Now",
-      action: () => window.open("https://wa.me/8871122111"),
+      action: () => window.open("https://wa.me/918871122111"),
       bgColor: "bg-gradient-to-r from-green-100 to-green-200",
       hoverColor: "hover:from-green-200 hover:to-green-300",
     },

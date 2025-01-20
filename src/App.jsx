@@ -6,17 +6,18 @@ import Aboutus from './Components/Aboutus';
 import Customercopy from './Components/Customercopy';
 import Services from './Components/Services';
 import FloatingContactButton from './Components/FloatingContactButton';
+import Blog from './Components/Blog';
 
 export class App extends Component {
   render() {
     return (
       <>
         <Herosection />
-        <Services />
         <Aboutus />
+        <Services />
         <Testimonials />
-        <Customercopy />
         <FloatingContactButton />
+        <Blog/>
       </>
     );
   }

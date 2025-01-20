@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link,  } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -8,15 +8,14 @@ const Footer = () => {
       <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Company Info */}
         <div>
-          <h3 className="text-xl font-bold mb-4">AutoCare Plus</h3>
+          <h3 className="text-xl font-bold mb-4">Vehicle solution bhopal</h3>
           <p className="text-slate-300 mb-4">
             Your trusted partner in complete automotive care and maintenance. Quality service guaranteed.
           </p>
           <div className="flex space-x-4">
-            <Facebook className="w-5 h-5 text-slate-300 hover:text-red-400 cursor-pointer" />
-            <Twitter className="w-5 h-5 text-slate-300 hover:text-red-400 cursor-pointer" />
-            <Instagram className="w-5 h-5 text-slate-300 hover:text-red-400 cursor-pointer" />
-            <Linkedin className="w-5 h-5 text-slate-300 hover:text-red-400 cursor-pointer" />
+           <Link to="https://www.facebook.com/p/Vehicle-Solution-Bhopal-61551880049632/" >  <Facebook className="w-5 h-5 text-slate-300 hover:text-red-400 cursor-pointer" /></Link>
+           <Link to="https://www.instagram.com/vehiclesolution.in/" > <Instagram className="w-5 h-5 text-slate-300 hover:text-red-400 cursor-pointer" /></Link>
+           
           </div>
         </div>
 
@@ -73,7 +72,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="w-[90%] mx-auto border-t border-slate-700 mt-12 pt-8">
         <p className="text-center text-slate-400">
-          © {new Date().getFullYear()} AutoCare Plus. All rights reserved.
+          © {new Date().getFullYear()}Vehicle solution. All rights reserved.
         </p>
       </div>
     </footer>

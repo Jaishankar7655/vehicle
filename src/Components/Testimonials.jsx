@@ -4,11 +4,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const VideoCarousel = () => {
   const videoIds = [
-    "/f-t_IkcKB1M",
-    "58VZ1r8D7eA",
-    "U6sEP8m95jI",
-    "bfHwoTzYR1o",
-    "dK_MB8s8tdM",
+    "0tRb_hOKo24",
+    "DNOO6szuR4Q",
+    "Kp94x4ov0RU",
+    "uSLZu1IGVUA",
+    "8Qm5LWh12t8",
   ];
 
   const scrollRef = useRef(null);

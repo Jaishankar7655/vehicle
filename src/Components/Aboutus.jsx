@@ -1,7 +1,7 @@
 import React from "react";
 import { Check, ArrowRight, Clock, Users, Award } from "lucide-react";
-import about from "../assets/image/about.png";
-import about2 from "../assets/image/about2.png";
+
+import about2 from "../assets/image/vehicleperson.jpg";
 
 const Aboutus = () => {
   const stats = [

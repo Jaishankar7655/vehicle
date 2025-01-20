@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronRight, ChevronDown, Home, Info, Settings, Phone, Calendar, Wrench, X } from "lucide-react";
+import { ChevronRight, ChevronDown, Home, Info, Settings, Phone, Calendar, Wrench, X, FolderMinusIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function SideNav({ navOpen, setNavOpen }) {

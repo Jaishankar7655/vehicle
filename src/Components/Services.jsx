@@ -2,6 +2,7 @@ import React from "react";
 import { Settings, Paintbrush, Car } from "lucide-react";
 import { Link } from "react-router-dom";
 
+
 function Services() {
   return (
     <section className="">
@@ -15,9 +16,9 @@ function Services() {
             <div className="w-52 h-1 bg-red-600 rounded-full"></div>
           </div>
         </div>
-        
-        <div className="w-full gap-10 justify-around flex-wrap flex mt-12">
-          <Link to="/ServiceContainer" className="lg:w-[20%] w-[96%] transform transition-all duration-300 hover:-translate-y-1" >
+       
+        <div className="w-full gap-3 justify-center  flex-wrap flex my-12">
+          <Link to="/Servies/CarServices" className="lg:w-[20%] w-[96%] transform transition-all duration-300 hover:-translate-y-1" >
                
           <div >
             <div className="p-6 bg-white h-[300px] text-center border hover:border-red-700 rounded-lg shadow-md hover:shadow-xl">
@@ -44,6 +45,20 @@ function Services() {
               <p className="text-gray-600">
                 Enjoy a premium body wash that restores your car's shine and
                 protects its exterior.
+              </p>
+            </div></Link>
+          </div>
+
+          <div className="lg:w-[20%] w-[96%] transform transition-all duration-300 hover:-translate-y-1">
+           <Link to="/Servies/Fullbodypaint" >
+           
+           <div className="p-6 bg-white h-[300px] text-center border hover:border-red-700 rounded-lg shadow-md hover:shadow-xl">
+              <div className="flex justify-center mb-6">
+                <Paintbrush className="w-12 h-12 text-red-600" />
+              </div>
+              <h1 className="text-2xl font-bold mb-4">  Full Body Paint </h1>
+              <p className="text-gray-600">
+              Full body paint services transform the body into a canvas, creating vibrant, artistic designs for events, performances, and photoshoots.
               </p>
             </div></Link>
           </div>

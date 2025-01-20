@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Wrench, Car, Settings, Disc, Zap } from 'lucide-react';
-import ServiceSearch from './ServiceSearch';
+import ServiceSearch from './CarServices';
 
 const ServicesShowcase = () => {
   const navigate = useNavigate();
